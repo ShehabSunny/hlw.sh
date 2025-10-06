@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: "Courier New", monospace;
+      }
+
+      .typing-container {
+        text-align: center;
+      }
+
+      .typing-text {
+        font-size: 6rem;
+        color: white;
+        overflow: hidden;
+        border-right: 4px solid white;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.1em;
+        animation: typing 3.5s steps(25, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: white;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .typing-text {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .typing-text {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="typing-container">
+      <div class="typing-text">hello! this is shehab.</div>
+    </div>
+  </body>
+</html>
